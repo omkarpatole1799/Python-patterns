@@ -327,3 +327,57 @@ for i in range(1,n+1):
     for j in range(i, 0, -1):
         print(j, end=" ")
     print()
+
+print("pat 18")
+
+# E D C B A
+# E D C B
+# E D C
+# E D
+# E
+
+for i in range(0,n):
+    char = 65
+    for j in range(char + n -1, char+i-1, -1 ):
+        print(chr(j), end=" ")
+    print()
+
+print("pat 19")
+# 1 1 1 1 1 1
+# 2 2 2 2 2
+# 3 3 3 3
+# 4 4 4
+# 5 5
+# 6
+
+for i in range(1,7):
+    for j in range(0, 7-i):
+        print(i, end=" ")
+    print()
+
+
+print("pat 20")
+# *        *
+# **      **
+# ***    ***
+# ****  ****
+# **********
+# ****  ****
+# ***    ***
+# **      **
+# *        *
+
+# upper part
+for i in range(0,n):
+    #star 
+    for j in range(0,i+1):
+        print("*", end="")
+    #space
+    for j in range(0,2*n-(2*i)):
+        print("1", end="")
+    #star
+    for j in range(0,i+1    ):
+        print("*", end="")
+
+
+    print()
