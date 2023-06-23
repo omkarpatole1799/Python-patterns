@@ -237,14 +237,29 @@ def pat13(n):
 pat13(n)
 
 
+# A
+# AB
+# ABC
+# ABCD
+# ABCDE
+
 print("pat 14")
+# method 1
 def pat14(n):
     for i in range(65, n+65):
         for j in range(65, i+1):
             print(chr(j), end="")
         print()
-
 pat14(n)
+
+#method 2
+for i in range(0,n):
+    ch = 65
+    for j in range(0, i+1):
+        print(chr(ch), end="")
+        ch += 1
+    print()
+    
 
 print("pat 15")
 #     *
@@ -275,3 +290,40 @@ def pat15(n):
         print()
 
 pat15(n)
+
+print("pat 16")
+
+# ABCDE
+# ABCD
+# ABC
+# AB
+# A
+
+for i in range(0,n):
+    c = 65
+    for j in range(0,n-i):
+        print(chr(c), end="")
+        c += 1
+    print()
+
+
+print("pat 17")
+# 1                 1
+# 1 2             2 1
+# 1 2 3         3 2 1
+# 1 2 3 4     4 3 2 1
+# 1 2 3 4 5 5 4 3 2 1
+
+for i in range(1,n+1):
+    #number
+    for j in range(1,i+1):
+        print(j, end=" ")
+
+    #space
+    for j in range(0,2*n-(2*i)):
+        print(" ", end=" ")
+
+    #number
+    for j in range(i, 0, -1):
+        print(j, end=" ")
+    print()
