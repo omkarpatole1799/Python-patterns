@@ -17,58 +17,8 @@
 2. Fibonacci sequence 
     - upto n numbers
 	- addition upto n number 
-'''
 
 '''
-3. prime number
- 	- upto n numbers
-    - addition upto n numbers
-    
-'''
-
-#list of prime numbers upto n number
-primeArr = []
-def listPrime(n):
-    for num in range(2,n):
-        prime = True
-        for j in range(2,num):
-            if (num % j == 0):
-                prime = False
-        if prime:
-            primeArr.append(num)
-
-# listPrime(101)
-# print(primeArr)
-
-#addition of prime numbers upto n number
-
-def addPrime(n):
-    sum = 0
-    for num in range(2, n):
-        prime = True
-        for j in range(2, num):
-            if (num % j == 0):
-                prime = False
-        if prime:
-            sum += num
-    return sum
-
-sum = addPrime(10)
-print(sum)
-
-# check if the number is prime or not
-def primeNumber(n):
-    if(n>1):
-        for i in range(2,n):
-            if(n % i == 0):
-                return False
-            return True
-        return False
-
-# print(primeNumber(5))
-
-
-
 # addition upto n number 
 def fibAdd(n):
     if (n>=1):
@@ -86,7 +36,7 @@ def fibAdd(n):
                 b = c
                 addition += c
             print("addition is: ", addition)
-# fibAdd(3)
+fibAdd(3)
 
 # upto n numbers
 def fibonacciSeq(n):
@@ -104,4 +54,4 @@ def fibonacciSeq(n):
                 a = b
                 b = c
                 print(c)
-# fibonacciSeq(5)
+fibonacciSeq(5)
